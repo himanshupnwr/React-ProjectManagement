@@ -102,8 +102,7 @@ function App() {
       onDelete={handleDeleteProject}
       onAddTask={handleAddTask}
       onDeleteTask={handleDeleteTask}
-      tasks={projectsState.tasks}
-    />
+      tasks={projectsState.tasks} />
   );
 
   if (projectsState.selectedProjectId === null) {
@@ -116,7 +115,8 @@ function App() {
     <main className="h-screen my-8 flex gap-8">
       <ProjectsSidebar onStartAddProject={handleStartAddProject}
         projects={projectsState.projects}
-        onSelectProject={handleSelectProject}/>
+        onSelectProject={handleSelectProject}
+        selectedProjectId={projectsState.selectedProjectId} />
       {content}
     </main>
   );
